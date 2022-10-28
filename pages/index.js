@@ -18,9 +18,7 @@ export default function Home() {
 
   const { address, isConnected } = useAccount({
     onConnect({ address, connector, isReconnected }) {
-      // hardcode address to test videos
-
-      queryNFTdata("0x34c0a0bd8ee3236d62f334094f9f098020a526f2"); // address
+      queryNFTdata(address); // address
     },
     onDisconnect() {
       setUsersNFTs(null);
